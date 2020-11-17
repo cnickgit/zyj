@@ -5,3 +5,7 @@ import http from '../utils/http'
 export function searchWWH(params){
   return http.post('superscanPH/opQuery.jsp',params)
 }
+
+export function loginZyj(params){
+  return http.post('superscan/op.jsp',params)
+}

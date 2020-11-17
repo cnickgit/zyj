@@ -52,7 +52,7 @@
 </template>
 
 <script>
-    import {searchWWH} from '@/api/zyj'
+    import {searchWWH, loginZyj} from '@/api/zyj'
     import { Loading,Tab,Tabs,Search,Tabbar,TabbarItem,Button  } from 'vant'
     export default {
         name: "homePage",
@@ -109,13 +109,37 @@
                this.currIndex = index;
                this.$router.push(val);
            },
+           setCookiejs(name, value) {
+               var Days = 1;
+               var exp = new Date();
+               exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+               document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+               // document.cookie="us=11"
+               console.log(document.cookie);
+           },
            search(){
-               let param = {
-                   m: "queryAliim",
-                   aliim: this.searchName
+               //先模拟登陆
+               let data = {
+                   m: "login",
+                   username:"13868612368",
+                   password:"gl112233",
+                   parcame:"ajax",
+                   type:1,
+                   origin:"cktoolApp"
                }
-               searchWWH(param).then(res => {
-                   console.log("res:",res);
+               loginZyj(data).then(res => {
+                  this.setCookiejs("13868612368","13868612368"+"&"+window.btoa("gl112233"));
+                   let params = {
+                       m: "sAliim",
+                       ifQBase: true,
+                       ifQReport: true,
+                       judgeAnother: true,
+                       aliim: this.searchName,
+                       c: "nznd"
+                   }
+                   searchWWH(params).then(res => {
+                        console.log("res:",res)
+                   })
                })
 
            }
