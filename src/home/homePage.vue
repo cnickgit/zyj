@@ -10,28 +10,34 @@
           <div>
             <van-button round type="info" size="large" @click="search()">查询</van-button>
           </div>
-          <div>
-            <div>买家:aa</div>
-            <div>实名认证:bb</div>
+          <div v-if="true">
+
           </div>
-          <div>
-            <div>买家信誉:aa</div>
-            <div>注册日期:bb</div>
+          <div v-if="false">
+            <div>
+              <div>买家:aa</div>
+              <div>实名认证:bb</div>
+            </div>
+            <div>
+              <div>买家信誉:aa</div>
+              <div>注册日期:bb</div>
+            </div>
+            <div>
+              <div>商家信誉:aa</div>
+              <div>淘龄:bb</div>
+            </div>
+            <div>
+              <div>性别:aa</div>
+              <div>买家总周平均:bb</div>
+            </div>
+            <div>
+              好评率:ee
+            </div>
+            <div>
+              查询时间:ee
+            </div>
           </div>
-          <div>
-            <div>商家信誉:aa</div>
-            <div>淘龄:bb</div>
-          </div>
-          <div>
-            <div>性别:aa</div>
-            <div>买家总周平均:bb</div>
-          </div>
-          <div>
-            好评率:ee
-          </div>
-          <div>
-            查询时间:ee
-          </div>
+
         </van-tab>
         <van-tab title="标签 2">内容 2</van-tab>
         <van-tab title="标签 3">内容 3</van-tab>

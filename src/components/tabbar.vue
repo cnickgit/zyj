@@ -46,24 +46,24 @@ export default {
                   normal: require('@/assets/home_ico_active.png'),
                   active: 0
               },
-              {
-                  name: "category",
-                  title: "打标",
-                  normal: require('@/assets/report_ico.png'),
-                  active: 1
-              },
-              {
-                  name: "message",
-                  title: "客服",
-                  normal: require('@/assets/teas_ico.png'),
-                  active: 2
-              },
-              {
-                  name: "cart",
-                  title: "打标记录",
-                  normal: require('@/assets/save_ico.png'),
-                  active: 3
-              },
+              // {
+              //     name: "category",
+              //     title: "打标",
+              //     normal: require('@/assets/report_ico.png'),
+              //     active: 1
+              // },
+              // {
+              //     name: "message",
+              //     title: "客服",
+              //     normal: require('@/assets/teas_ico.png'),
+              //     active: 2
+              // },
+              // {
+              //     name: "cart",
+              //     title: "打标记录",
+              //     normal: require('@/assets/save_ico.png'),
+              //     active: 3
+              // },
               {
                   name: "My",
                   title: "我的",
