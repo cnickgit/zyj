@@ -10,34 +10,28 @@
           <div>
             <van-button round type="info" size="large" @click="search()">查询</van-button>
           </div>
-          <div v-if="true">
-
-          </div>
-          <div v-if="false">
-            <div>
-              <div>买家:aa</div>
-              <div>实名认证:bb</div>
-            </div>
-            <div>
-              <div>买家信誉:aa</div>
-              <div>注册日期:bb</div>
-            </div>
-            <div>
-              <div>商家信誉:aa</div>
-              <div>淘龄:bb</div>
-            </div>
-            <div>
-              <div>性别:aa</div>
-              <div>买家总周平均:bb</div>
-            </div>
-            <div>
-              好评率:ee
-            </div>
-            <div>
-              查询时间:ee
-            </div>
-          </div>
-
+            <van-row style="margin-top: 20px;" justify="center">
+              <van-col span="12">买家: 8</van-col>
+              <van-col span="12">实名认证: 8</van-col>
+            </van-row>
+          <van-row style="margin-top: 20px;" justify="center">
+            <van-col span="12">买家信誉: 8</van-col>
+            <van-col span="12">注册日期: 8</van-col>
+          </van-row>
+          <van-row style="margin-top: 20px;" justify="center">
+            <van-col span="12">商家信誉: 8</van-col>
+            <van-col span="12">	淘龄: 8</van-col>
+          </van-row>
+          <van-row style="margin-top: 20px;" justify="center">
+            <van-col span="12">性别: 8</van-col>
+            <van-col span="12">	买家总周平均: 8</van-col>
+          </van-row>
+          <van-row style="margin-top: 20px;" justify="center">
+            <van-col span="12">好评率: 8</van-col>
+          </van-row>
+          <van-row style="margin-top: 20px;" justify="center">
+            <van-col span="12">查询时间: 8</van-col>
+          </van-row>
         </van-tab>
         <van-tab title="标签 2">内容 2</van-tab>
         <van-tab title="标签 3">内容 3</van-tab>
@@ -47,7 +41,7 @@
 
 <script>
     import {searchWWH, loginZyj} from '@/api/zyj'
-    import { Loading,Tab,Tabs,Search,Tabbar,TabbarItem,Button  } from 'vant'
+    import { Loading,Tab,Tabs,Search,Tabbar,TabbarItem,Button,Col, Row  } from 'vant'
     export default {
         name: "homePage",
         components: {
@@ -57,7 +51,9 @@
             [Search.name]: Search,
             [Tabbar.name]: Tabbar,
             [TabbarItem.name]: TabbarItem,
-            [Button.name]: Button
+            [Button.name]: Button,
+            [Col.name]: Col,
+            [Row.name]: Row
         },
        data(){
           return {
