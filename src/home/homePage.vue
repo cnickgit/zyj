@@ -65,7 +65,7 @@
 </template>
 
 <script>
-    import {searchWWH, loginZyj} from '@/api/zyj'
+    import {searchWWH, loginZyj} from '@/api/zyjReq/zyj'
     import { Loading,Tab,Tabs,Search,Tabbar,TabbarItem,Button,Col, Row  } from 'vant'
     export default {
         name: "homePage",
