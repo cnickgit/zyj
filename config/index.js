@@ -11,10 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      target: 'http://139.159.141.200/app/',
-      changeOrigin: true,
-      pathRewrite: {
-        '/api': ''
+      '/api' : {
+        target: 'http://139.159.141.200',
+        changeOrigin: true,
+        pathRewrite: {
+          '/api': ''
+        },
       },
       onProxyReq: function (proxyReq, req, res) {
         //实在不知道代理后的路径，可以在这里打印出出来看看

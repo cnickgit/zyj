@@ -96,6 +96,19 @@
                console.log(document.cookie);
            },
            search(){
+               let params = {
+                   m: "sAliim",
+                   ifQBase: true,
+                   ifQReport: true,
+                   judgeAnother: true,
+                   aliim: this.searchName,
+                   c: "nznd"
+               }
+               searchWWH(params).then(res => {
+                   console.log("res:",res)
+               })
+           },
+           login(){
                //先模拟登陆
                let data = {
                    m: "login",
@@ -106,21 +119,13 @@
                    origin:"cktoolApp"
                }
                loginZyj(data).then(res => {
-                  this.setCookiejs("13868612368","13868612368"+"&"+window.btoa("gl112233"));
-                   let params = {
-                       m: "sAliim",
-                       ifQBase: true,
-                       ifQReport: true,
-                       judgeAnother: true,
-                       aliim: this.searchName,
-                       c: "nznd"
-                   }
-                   searchWWH(params).then(res => {
-                        console.log("res:",res)
-                   })
-               })
+                   this.setCookiejs("13868612368","13868612368"+"&"+window.btoa("gl112233"));
 
+               })
            }
+       },
+       created() {
+          this.login();
        }
     }
 </script>
